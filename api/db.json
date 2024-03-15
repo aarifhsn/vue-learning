@@ -1,0 +1,34 @@
+{
+  "user": [
+    {
+      "name": "Arif",
+      "email": "arif@gmail.com",
+      "password": "100000",
+      "id": "1"
+    },
+    {
+      "name": "hassan",
+      "email": "arifhassan@gmail.com",
+      "password": "100dfas000",
+      "id": "2"
+    },
+    {
+      "id": "dfb2",
+      "email": "aarifhsn@gmail.com",
+      "name": "arif hassan",
+      "password": "asdf333"
+    },
+    {
+      "id": "4e9e",
+      "email": "aarifhsn@gmail.com",
+      "name": "afsdadf",
+      "password": "fasd"
+    },
+    {
+      "id": 2,
+      "name": "hassan",
+      "email": "arifhassan@gmail.com",
+      "password": "100dfas000"
+    }
+  ]
+}
