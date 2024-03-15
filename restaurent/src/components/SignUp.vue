@@ -1,21 +1,37 @@
 <script setup>
 import { ref } from "vue";
 import axios from "axios";
+import router from "../router";
 const name = ref("");
 const email = ref("");
 const password = ref("");
 
 const signUpTest = async () => {
-  let result = await axios.post("http://localhost:3000/user", {
-    email: email.value,
-    name: name.value,
-    password: password.value,
-  });
-  console.log(result);
-  if (result.status == 201) {
-    alert("signup done");
+  try {
+    let result = await axios.post("http://localhost:3000/user", {
+      email: email.value,
+      name: name.value,
+      password: password.value,
+    });
+    console.log(result);
+    if (result.status == 201) {
+      localStorage.setItem("user-info", JSON.stringify(result.data));
+      redirectToHomePage();
+    }
+  } catch (error) {
+    console.error("Error during sign up:", error);
+    // Handle the error appropriately, e.g., display a message to the user
   }
 };
+
+const redirectToHomePage = () => {
+  router.push({ name: "Home" });
+};
+
+let user = localStorage.getItem("user-info");
+if (user) {
+  redirectToHomePage();
+}
 </script>
 
 <template>

@@ -1,9 +1,7 @@
-<script setup>
-import SingUp from "./components/SingUp.vue";
-</script>
+<script setup></script>
 
 <template>
-  <SingUp />
+  <router-view />
 </template>
 
 <style scoped></style>
