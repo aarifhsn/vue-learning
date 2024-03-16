@@ -65,6 +65,62 @@
       "email": "aarifhsn@gmail.com",
       "name": "arif hassan",
       "password": "fasd"
+    },
+    {
+      "id": "d3c0",
+      "email": "aarifhsn@gmail.com",
+      "name": "arif hassan",
+      "password": "fasdfa"
+    },
+    {
+      "id": "d26b",
+      "email": "",
+      "name": "",
+      "password": ""
+    },
+    {
+      "id": "ad38",
+      "email": "aarifhsn@gmail.com",
+      "name": "aarifhsn",
+      "password": "12345"
+    },
+    {
+      "id": "8e5a",
+      "email": "aarifhsn@gmail.com",
+      "name": "arif hassan",
+      "password": "12345"
+    },
+    {
+      "id": "0155",
+      "email": "aarifhsn@gmail.com",
+      "name": "arif hassan",
+      "password": "12345"
+    },
+    {
+      "id": "3caa",
+      "email": "marfi@test.com",
+      "name": "marfi",
+      "password": "123456"
+    }
+  ],
+  "restaurent": [
+    {
+      "id": 1,
+      "name": "Burger King",
+      "contact": 111111,
+      "address": "Bangladesh"
+    },
+    {
+      "id": 2,
+      "name": "Ding Dong",
+      "contact": 33334444,
+      "address": "Brahmanbaria"
+    },
+    {
+      "id": 3,
+      "name": "Pizza Hut",
+      "contact": 111133311,
+      "address": "Brahmanbaria"
     }
   ]
 }
