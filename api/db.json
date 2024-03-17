@@ -101,23 +101,29 @@
       "email": "marfi@test.com",
       "name": "marfi",
       "password": "123456"
+    },
+    {
+      "id": "0fa5",
+      "email": "marfi@test.com",
+      "name": "marfi",
+      "password": "123456"
     }
   ],
-  "restaurent": [
+  "restaurant": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Burger King",
       "contact": 111111,
       "address": "Bangladesh"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Ding Dong",
       "contact": 33334444,
       "address": "Brahmanbaria"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Pizza Hut",
       "contact": 111133311,
       "address": "Brahmanbaria"

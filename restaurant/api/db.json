@@ -103,66 +103,24 @@
       "password": "123456"
     }
   ],
-  "restaurent": [
+  "restaurant": [
     {
-      "id": "1",
-      "name": "Burger King",
-      "contact": 111111,
-      "address": "Bangladesh"
+      "name": "RCB Restaurant2",
+      "address": "Bangladesh2",
+      "contact": "3749127349872",
+      "id": "4942"
     },
     {
-      "id": "2",
-      "name": "Ding Dong",
-      "contact": 33334444,
-      "address": "Brahmanbaria"
-    },
-    {
-      "id": "3",
-      "name": "Pizza Hut",
-      "contact": 111133311,
-      "address": "Brahmanbaria"
-    },
-    {
-      "id": "4942",
-      "name": "RCB Restaurent",
-      "address": "Bangladesh",
-      "contact": "374912734987"
-    },
-    {
-      "id": "a5bf",
-      "name": "",
-      "address": "",
-      "contact": ""
-    },
-    {
-      "id": "9421",
-      "name": "New One",
+      "name": "arif hassan",
       "address": "dfasdfas",
-      "contact": "52345234"
+      "contact": "52345234",
+      "id": "9421"
     },
     {
-      "id": "a561",
-      "name": "Cafe Hassan",
-      "address": "Kumarshil Moor",
-      "contact": "3452452352"
-    },
-    {
-      "id": "c5f2",
       "name": "Cafe Amin",
       "address": "T.A.ROAD",
-      "contact": "4234234"
-    },
-    {
-      "id": "1541",
-      "name": "",
-      "address": "",
-      "contact": ""
-    },
-    {
-      "id": "d8fa",
-      "name": "",
-      "address": "",
-      "contact": ""
+      "contact": "4234234222",
+      "id": "c5f2"
     },
     {
       "id": "cdf7",

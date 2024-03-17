@@ -1,8 +1,10 @@
 <script setup>
-import axios from "axios";
 import router from "../router";
+import { useRoute } from "vue-router";
 import Header from "./Header.vue";
-import { ref } from "vue";
+import axios from "axios";
+import { ref, onMounted } from "vue";
+
 const redirectToSignUpPage = () => {
   router.push({ name: "SignUp" });
 };
@@ -10,28 +12,37 @@ let user = localStorage.getItem("user-info");
 if (!user) {
   redirectToSignUpPage();
 }
+const route = useRoute();
 
-const restaurent = ref({
-  name: "",
-  address: "",
-  contact: "",
+const updateResult = async () => {
+  let result = await axios.get(
+    `http://localhost:3000/restaurant/${route.params.id}`
+  );
+  restaurant.value = result.data;
+};
+
+onMounted(() => {
+  updateResult(); // Fetch update result when component is mounted
 });
 
-const addRestaurent = async () => {
+const updateRestaurant = async () => {
   // Check if name and address are provided
-  if (!restaurent.value.name || !restaurent.value.address) {
+  if (!restaurant.value.name || !restaurant.value.address) {
     alert("Name and address are required.");
     return; // Stop execution if validation fails
   }
   try {
-    let response = await axios.post("http://localhost:3000/restaurent", {
-      name: restaurent.value.name,
-      address: restaurent.value.address,
-      contact: restaurent.value.contact,
-    });
+    let response = await axios.put(
+      `http://localhost:3000/restaurant/${route.params.id}`,
+      {
+        name: restaurant.value.name,
+        address: restaurant.value.address,
+        contact: restaurant.value.contact,
+      }
+    );
 
     // Redirect to Home page
-    if (response.status == 201) {
+    if (response.status == 200) {
       router.push({ name: "Home" });
     }
     console.log("Restaurant added successfully:", response.data);
@@ -39,33 +50,41 @@ const addRestaurent = async () => {
     console.error("Error adding restaurant:", error);
   }
 };
+
+const restaurant = ref({
+  name: "",
+  address: "",
+  contact: "",
+});
 </script>
 
 <template>
   <div class="container">
     <Header />
-    <h1>Hello user, Welcome to Add Restaurent page</h1>
-    <div class="add_form">
+    <h1>Hello user, Welcome to Update restaurant page</h1>
+    <div class="update_form">
       <form>
         <input
           type="text"
           name="name"
-          placeholder="Enter Name"
-          v-model="restaurent.name"
+          placeholder="Enter restaurant name"
+          v-model="restaurant.name"
         />
         <input
           type="text"
           name="address"
           placeholder="Enter Address"
-          v-model="restaurent.address"
+          v-model="restaurant.address"
         />
         <input
           type="text"
           name="contact"
           placeholder="Enter Contact"
-          v-model="restaurent.contact"
+          v-model="restaurant.contact"
         />
-        <button @click="addRestaurent" type="button">Add New Restaurent</button>
+        <button @click="updateRestaurant" type="button">
+          Update restaurant
+        </button>
       </form>
     </div>
   </div>
@@ -79,13 +98,12 @@ const addRestaurent = async () => {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f2eaea;
 }
-.add_form form {
+.update_form form {
   display: flex;
   flex-direction: column;
 }
-.add_form form input,
+.update_form form input,
 form button {
   margin-top: 10px;
 }

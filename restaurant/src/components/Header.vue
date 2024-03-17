@@ -11,8 +11,8 @@ const logoutFunction = () => {
   <div class="nav">
     <ul>
       <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/add">Add Restaurent</router-link></li>
-      <li><router-link to="/update">Update Restaurent</router-link></li>
+      <li><router-link to="/add">Add Restaurant</router-link></li>
+      <!-- <li><router-link to="/update">Update Restaurant</router-link></li> -->
       <li><a href="#" @click="logoutFunction">Logout</a></li>
     </ul>
   </div>
