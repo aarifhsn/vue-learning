@@ -14,7 +14,9 @@ export default {
                     :assignment="assignment"
                 ></assignment>
             </ul>
-        </section> 
+        </section>
+
+      
     `,
 
   props: {
